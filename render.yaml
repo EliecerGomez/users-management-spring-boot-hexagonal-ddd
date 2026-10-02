@@ -12,9 +12,9 @@ services:
       - key: DB_HOST
         sync: false
       - key: DB_PORT
-        value: "3306"
+        sync: false
       - key: DB_NAME
-        value: crud_usuarios
+        sync: false
       - key: DB_USERNAME
         sync: false
       - key: DB_PASSWORD
