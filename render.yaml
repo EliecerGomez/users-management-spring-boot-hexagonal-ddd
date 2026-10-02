@@ -7,6 +7,8 @@ services:
     autoDeployTrigger: commit
     healthCheckPath: /v3/api-docs
     envVars:
+      - key: DB_ENGINE
+        value: "mysql"
       - key: DB_HOST
         sync: false
       - key: DB_PORT
