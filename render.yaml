@@ -5,18 +5,20 @@ services:
     plan: free
     branch: main
     autoDeployTrigger: commit
-    healthCheckPath: /v3/api-docs
+    healthCheckPath: /swagger-ui/index.html
     envVars:
+      - key: PORT
+        value: "8080"
       - key: DB_ENGINE
         value: "mysql"
       - key: DB_HOST
-        sync: false
+        value: "proyecto-spring-proyecto-spring.i.aivencloud.com"
       - key: DB_PORT
-        sync: false
+        value: "18105"
       - key: DB_NAME
-        sync: false
+        value: "defaultdb"
       - key: DB_USERNAME
-        sync: false
+        value: "avnadmin"
       - key: DB_PASSWORD
         sync: false
       - key: DB_SSL_MODE
@@ -26,11 +28,11 @@ services:
       - key: SMTP_PORT
         value: "587"
       - key: SMTP_USERNAME
-        sync: false
+        value: "gomezeliecer83@gmail.com"
       - key: SMTP_PASSWORD
         sync: false
       - key: SMTP_FROM_ADDRESS
-        sync: false
+        value: "gomezeliecer83@gmail.com"
       - key: SMTP_FROM_NAME
         value: Gestion de Usuarios
       - key: JWT_SECRET
